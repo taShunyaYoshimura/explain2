@@ -84,6 +84,7 @@ const app = Vue.createApp({
     /* 「送信」ボタンをクリックした場合の動作です。 */
     answerInput(event, stage, number, final) {
       /* answerをtrueまたはfalseにします。 */
+      console.log(event);
       this.answer[stage][number-1] = event;
       /* STAGEのすべての問題がtrueか調べてclearの値を変更します。*/
       const result = this.answer[stage].every((element) => {
